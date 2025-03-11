@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>Миссия Колонизация Марса</h1>
+        <h4>И на Марсе будут яблони цвести!</h4>
+        {% if engineer %}
+            <h2>Инженерные тренажеры</h2>
+            <img src="/static/img/Engineering simulators.png" alt="здесь должна была быть картинка, но не нашлась">
+        {% else %}
+            <h2>Научные симуляторы</h2>
+            <img src="/static/img/Scientific simulators.png" alt="здесь должна была быть картинка, но не нашлась">
+        {% endif %}
+    </body>
+</html>

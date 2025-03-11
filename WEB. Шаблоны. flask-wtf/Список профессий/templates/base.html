@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>Миссия Колонизация Марса</h1>
+        <h1>И на Марсе будут яблони цвести!</h1>
+        <h2>Список профессий</h2>
+        {% if labeled %}
+            <!-- Маркированный список -->
+            <ul>
+                {% for profession in professions %}
+                    <li>{{ profession }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+        <ol>
+            {% for profession in professions %}
+                <li>{{ profession }}</li>
+            {% endfor %}
+        </ol>
+        {% endif %}
+    </body>
+</html>
