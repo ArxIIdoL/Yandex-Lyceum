@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>{{ title }}</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    </head>
+    <body>
+        <h1>Миссия Колонизация Марса</h1>
+        <h1 id="slogan">И на Марсе будут яблони цвести!</h1>
+        <img src="/static/img/emblem.png" alt="здесь должна была быть картинка"><h4>Аварийный доступ</h4>
+        <form action="" method="post" novalidate>
+        <div>
+            {{ form.csrf_token }}
+        </div>
+        {% for field in form if field.name != 'csrf_token' %}
+            <div>
+                {{ field.label() }}
+                {{ field() }}
+                {% for error in field.errors %}
+                    <div class="error">{{ error }}</div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        </form>
+    </body>
+</html>
