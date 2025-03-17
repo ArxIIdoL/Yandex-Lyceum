@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/base_style.css"/>
+</head>
+<body>
+<h1>Миссия Колонизация Марса</h1>
+<h1 id="slogan">И на Марсе будут яблони цвести!</h1>
+<div>
+    <h3 class="text-center my-2">Оформление каюты</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Цвет стен</th>
+            <th scope="col">Эмблема</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th style="background-color:{{wall_color}}"></th>
+            <td>
+                {% if is_adult %}
+                <img src="/static/img/adult_alien.png" alt="Картинку украло НЛО">
+                {% else %}
+                <img src="/static/img/baby_alien.png" alt="Картинку украло НЛО">
+                {% endif %}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
