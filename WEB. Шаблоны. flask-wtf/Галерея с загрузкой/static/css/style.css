@@ -1,0 +1,42 @@
+#slogan {
+    padding-left: 20px;
+    color: gray;
+}
+button {
+    /* Перекрашиваем фон кнопки в синий */
+    background-color: blue;
+
+    /* Цвет текста на кнопке белый */
+    color: white;
+
+    /* Остальные параметры можно оставить такими же или изменить по необходимости */
+}
+
+.container {
+    display: flex;           /* Используем Flexbox для центрирования */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center;     /* Центрирование по вертикали */
+    height: 100vh;           /* Высота контейнера 100% высоты окна браузера */
+    flex-direction: column;  /* Элементы располагаются вертикально */
+}
+
+/* Стиль для h3 */
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-align: center; /* Центрируем текст внутри элемента h3 */
+}
+
+/* Стиль для изображений */
+img {
+    max-width: 100%; /* Ограничиваем ширину изображения */
+    height: auto;    /* Сохраняем пропорции изображения */
+    display: block;  /* Устанавливаем изображение как блочный элемент */
+    margin: 0 auto;  /* Центрируем изображение по горизонтали */
+}
