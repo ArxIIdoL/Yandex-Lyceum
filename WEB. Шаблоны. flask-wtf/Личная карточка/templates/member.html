@@ -1,0 +1,7 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ fullname|safe }}</h1>
+    <img src="{{ image_path }}" alt="Здесь должна была быть фотография">
+    <h1>{{ jobs|safe }}</h1>
+{% endblock %}

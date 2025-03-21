@@ -1,0 +1,28 @@
+﻿{
+  "members": [
+    {
+      "name": "Александр",
+      "surname": "Волокитин",
+      "image_path": "static/img/members_image/Alexander_Volokitin.jpg",
+      "jobs": ["программист", "специалист по созданию сайтов о Марсе"]
+    },
+    {
+      "name": "Энди",
+      "surname": "Уир",
+      "image_path": "static/img/members_image/Andy_Weir.png",
+      "jobs": ["астрогеолог", "специалист по радиационной защите"]
+    },
+    {
+      "name": "Зип",
+      "surname": "Блоб",
+      "image_path": "static/img/members_image/Zip_Blob.jpg",
+      "jobs": ["эксперт по Марсу", "мастер шпионажа"]
+    },
+    {
+      "name": "Жданов",
+      "surname": "Жданович",
+      "image_path": "static/img/members_image/Zhdanov_Zhdanovich.jpg",
+      "jobs": ["эксперт по ожиданию"]
+    }
+  ]
+}
