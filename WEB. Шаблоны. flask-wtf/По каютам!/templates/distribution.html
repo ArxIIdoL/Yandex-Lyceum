@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <h2>
+        Размещение по каютам
+    </h2>
+    {% set cabin = "Каюта №" %}
+    <div>
+        {% for member in members %}
+        <p>
+            {{member}} - {{cabin}} {{loop.index}}{% if loop.index == 1 %} - капитан корабля{% endif %}
+        </p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
