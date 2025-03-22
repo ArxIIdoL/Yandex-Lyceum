@@ -1,0 +1,38 @@
+[
+  {
+    "surname": "Scott",
+    "name": "Ridley",
+    "age": 21,
+    "position": "captain",
+    "speciality": "research engineer",
+    "address": "module_1",
+    "email": "scott_chief@mars.org"
+  },
+  {
+    "surname": "Weir",
+    "name": "Andy",
+    "age": 25,
+    "position": "geologist",
+    "speciality": "soil analysis",
+    "address": "module_2",
+    "email": "andy_geology@mars.org"
+  },
+  {
+    "surname": "Wong",
+    "name": "Chang",
+    "age": 29,
+    "position": "mechanic",
+    "speciality": "robotics maintenance",
+    "address": "module_1",
+    "email": "chang_robotics@mars.org"
+  },
+  {
+    "surname": "Patel",
+    "name": "Priya",
+    "age": 27,
+    "position": "doctor",
+    "speciality": "medical officer",
+    "address": "module_2",
+    "email": "priya_medicine@mars.org"
+  }
+]
