@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    {% if current_user.is_authenticated %}
+        <p><a class="btn btn-secondary " href="/add_job">Добавить работу</a>
+            <a class="btn btn-secondary " href="/">Добавить департамент</a></p>
+        {% for item in jobs %}
+        <div class="col-md6 border rounded">
+            <h2>{{ item.job }}</h2>
+            <div>
+                Участники - {{ item.collaborators }}<br>
+                Дата начала - {{ item.start_date }}<br>
+                Дата окончания - {{ item.end_date }}<br>
+            </div>
+            <div>
+                Лидер - {{ item.team_leader }}, Статус работы - {% if item.is_finished %}Завершена{% else %}Не завершена{% endif %}
+                {% if current_user == item.user or current_user == captain %}
+                <p><a class="btn btn-info " href="/edit_job/{{ item.id }}">Изменить работу</a>
+                    <a class="btn btn-danger " href="/job_delete/{{ item.id }}">Удалить работу</a></p>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <h1>Mars one</h1>
+    {% endif %}
+{% endblock %}
