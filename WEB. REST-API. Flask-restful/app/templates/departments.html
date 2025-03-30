@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    {% if current_user.is_authenticated %}
+        <div class="row mb-3">
+            <div class="col-auto">
+                <a class="btn btn-secondary " href="/">Работы</a>
+            </div>
+            <div class="col-auto">
+                <a class="btn btn-secondary " href="/add_department">Добавить департамент</a>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">№</th>
+                    <th scope="col">Департамент</th>
+                    <th scope="col">Руководитель</th>
+                    <th scope="col">Члены</th>
+                    <th scope="col">Email</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in departments %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.user2.surname }} {{ item.user2.name }}</td>
+                    <td>{{ item.members }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>
+                        {% if current_user == item.user2 or current_user == captain %}
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <p><a class="btn btn-info " href="/edit_department/{{ item.id }}">Изменить департамент</a>
+                            <a class="btn btn-danger " href="/department_delete/{{ item.id }}">Удалить департамент</a></p>
+                        </div>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <h1>Mars one</h1>
+    {% endif %}
+{% endblock %}

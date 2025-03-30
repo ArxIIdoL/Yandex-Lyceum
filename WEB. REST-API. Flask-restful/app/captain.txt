@@ -1,0 +1,2 @@
+Captain password: password
+Captain email: scott_chief@mars.org
