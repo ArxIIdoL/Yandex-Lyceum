@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
@@ -5,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Отбор астронавтов"
+    return "РћС‚Р±РѕСЂ Р°СЃС‚СЂРѕРЅР°РІС‚РѕРІ"
 
 
 @app.route("/astronaut_selection", methods=("POST", "GET"))
